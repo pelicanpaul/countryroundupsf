@@ -1,0 +1,838 @@
+/*
+Theme Name: Music Freelancer
+Theme URI: http://www.paullyons.info
+Author: Paul Lyons
+Author URI: http://www.paullyons.info
+Description: WordPress theme for Musicians
+Version: 1.0
+License:
+License URI:
+Tags:
+Text Domain:
+
+
+/**
+ * 1.0 Reset
+ * -----------------------------------------------------------------------------
+ */
+
+body {
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    color: #58451b;
+    font-family: 'Open Sans', sans-serif;
+    background-color: #fff;
+/*    background-color: #e8d8b4;*/
+}
+
+#main {
+    padding: 0 0 40px 0;
+    margin: 0 auto;
+
+    max-width: 1000px;
+    min-height: 500px;
+}
+
+/*base fonts and colors*/
+
+#cal li.event {
+    clear: both;
+    padding-top: 1.5em;
+    border-top: 1px solid #cdcdcd;
+}
+
+#menu-main-menu {
+
+}
+
+a {
+    color: rgba(243, 34, 6, 1.0);
+    cursor: pointer;
+
+}
+
+a:hover {
+    color: #d00;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+h1 {
+    font-family: 'Special Elite', cursive;
+    font-size: 36px;
+    color: #c00;
+}
+
+h1.huge {
+    color: #c00;
+    font-size: 72px;
+}
+
+h2 {
+    font-family: 'Special Elite', cursive;
+    font-size: 28px;
+    color: #c00;
+
+}
+
+h3 {
+
+    font-family: 'Special Elite', cursive;
+    font-size: 22px;
+    color: #c00;
+}
+
+.alternate-content {
+    color: #fc0;
+}
+
+.navbar-header {
+    width: 100%;
+
+}
+
+.giant {
+    font-family: 'Special Elite', cursive;
+    color: #5b7293;
+    font-size: 34px;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    margin: 40px 0;
+    padding: 40px;
+}
+
+.quote-source {
+    font-size: 14px;
+    color: #ccc;
+}
+
+strong {
+    color: #c00;
+}
+
+.red {
+    color: #c00;
+}
+
+.red-bright {
+    color: #f00;
+}
+
+.white {
+    color: rgba(255, 255, 255, 0.95);
+}
+
+.yellow {
+    color: #dbae2e;
+}
+
+.larger {
+    font-size: 18px;
+}
+
+.huge {
+    font-size: 32px;
+}
+
+p {
+    line-height: 2;
+}
+
+.date-cool {
+    color: #999;
+    margin: 16px 0;
+}
+
+hr {
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+
+.site-title-mobile {
+    display:none;
+    font-family: 'Special Elite', cursive;
+    font-size: 22px;
+    color: #c00;
+}
+
+/*layout*/
+
+/* Custom container */
+
+.container-full {
+    margin: 0 auto;
+    width: 100%;
+}
+
+.content-left {
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    margin: 50px 0;
+    color: #dbae2e;
+}
+
+
+.container-page-full {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.attachment-post-thumbnail {
+    min-height: 100%;
+    min-width: 1024px;
+    width: 100%;
+    height: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -9999;
+}
+
+.feature {
+    font-size: 22px;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 25px 15px;
+    text-align: center;
+    margin: 250px 100px 50px;
+    border-radius: 10px;
+}
+
+header {
+    margin: 0;
+
+    min-height: 50px;
+ /*   background-color: #e8d8b4;*//*   background-color: #e8d8b4;*/
+  /*  background: #948155;*/
+    background-color: #e8d8b4;
+}
+
+.navbar {
+    border-radius: 0 !important; ;
+}
+
+
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    /* Margin bottom by footer height */
+    margin-bottom: 300px;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    /* Set the fixed height of the footer here */
+    height: 300px;
+    color: #e1dec1;
+    padding: 40px 30px;
+    background: #948155;
+    min-height: 60px;
+}
+
+.social {
+    float: right;
+    color: #e1dec1;
+}
+
+.social-text {
+    height: 30px;
+    float: left;
+    font-weight: 600;
+    padding: 4px 10px
+}
+
+.social-icons {
+    height: 30px;
+    float: left;
+}
+
+.social-icons .fa {
+    margin: 0 10px 0 0;
+}
+
+.social a, .social a:hover, .copyright a, .copyright a:hover {
+    color: #e1dec1;
+
+}
+
+
+.container-footer {
+    background-color: #000;
+    border-radius: 4px;
+    height: auto;
+    min-height: 50px;
+    padding: 16px;
+    bottom: 10px;
+}
+
+.copyright {
+    float: left;
+}
+
+.container-list-footer {
+    float: left;
+}
+
+.bottom-article {
+    color: #aaa;
+    font-size: 0.8em;
+}
+
+.bottom-article .fa {
+    margin: 0 8px 0 0;
+}
+
+ul.meta-post {
+    list-style-type: none;
+    margin: 20px 0;
+    background-color: #000;
+    padding: 10px 0;
+    height: 40px;
+}
+
+ul.meta-post li {
+    float: left;
+    padding: 0 10px 0 10px;
+}
+
+.muted {
+    color: #aaa;
+}
+
+ul.meta-post a {
+    color: #aaa;
+}
+
+ul.meta-post li + li {
+    border-left: 1px solid #777;
+}
+
+h3#comments {
+    font-size: 1.3em;
+}
+
+.comment-author .avatar {
+    display: none;
+}
+
+.breadcrumb {
+    padding: 8px 15px;
+    margin-bottom: 20px;
+    list-style: none;
+    background-color: transparent;
+    border-radius: 4px;
+    color: #999;
+}
+
+.sidebar {
+    margin-top: 80px;
+}
+
+/*gallery images*/
+
+.gallery img {
+    border: 4px solid #ccc !important;
+}
+
+.gallery-item {
+    float: left;
+    margin: 20px 0 20px 0;
+    text-align: center;
+
+}
+
+.gallery-caption {
+    color: #bbb;
+    font-size: 0.8em;
+    margin-top: 5px;
+}
+
+ul.list-large {
+    font-size: 2.6em;
+    list-style-type: none;
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #333;
+    padding: 40px 8px;
+}
+
+.home-main-text {
+    margin-top: 20% !important;
+}
+
+blockquote {
+    padding: 40px 20px;
+    margin: 40px 0;
+    font-size: 32px;
+    border-left: none;
+    line-height: 1;
+    color: #dbae2e;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+blockquote p {
+    line-height: 1;
+}
+
+.text-block {
+    margin: 34px 30px;
+    padding: 30px;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 6px;
+    min-height: 400px;
+}
+
+table.icons tr td {
+    font-size: 22px;
+    padding: 20px;
+
+}
+
+.icons-big {
+    color: rgba(243, 34, 6, 1.0) !important;
+    text-align: center;
+    display: block;
+}
+
+.big-feature {
+    text-align: center;
+}
+
+.big-feature-panel {
+    margin: 150px 0 20px 0;
+}
+
+/*menus*/
+.page-rec {
+    padding: 90px;
+}
+
+.page-slider {
+    display: block;
+    list-style-type: none;
+    padding: 0;
+}
+
+/* header */
+.logo {
+    max-width: 200px;
+    margin:  20px auto;
+
+
+}
+
+.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+    border-color: transparent;
+    padding-bottom: 15px;
+}
+
+.navbar-default {
+    background-color: #e8d8b4;
+
+}
+
+.navbar-default {
+    border:none;
+    background-color: transparent;
+    border-bottom: 8px double white;
+}
+
+.navbar > .container .navbar-brand, .navbar > .container-fluid .navbar-brand {
+    margin: 0 ;
+}
+
+.navbar-brand {
+    float:none;
+    padding: 0;
+    font-size: 18px;
+    line-height: 20px;
+    height: auto;
+    margin: 0;
+    text-align: center;
+
+}
+
+a.navbar-brand {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.main-menu {
+
+    text-align: center;
+    clear:both;
+    float:none;
+    margin: 0 auto;
+    max-width: 900px;
+}
+
+.main-menu > li {
+    margin-left: 5px;
+}
+
+.main-menu > li > a {
+    padding: 15px 30px;
+
+    font-weight: 100;
+
+    text-decoration: none;
+    font-family: 'Patua One', cursive;
+    text-transform: uppercase;
+    font-size: 18px;
+
+}
+
+.navbar-default .navbar-nav > li > a {
+    color: #c00;
+    background-color: #ddceab;
+
+
+}
+
+.navbar-default .navbar-nav > li > a:hover {
+    color: #c00;
+    background-color: #cab88f;
+    border-bottom-color: #fff;
+}
+
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+    color: #fff;
+    background-color: #c00;
+}
+
+
+.main-menu > .active > a,
+.main-menu > .active > a:hover,
+.main-menu > .active > a:focus {
+    color: #fff;
+    border-bottom-color: #c00;
+    background-color: #ddceab;
+}
+
+ul.shows {
+    line-height: 1.5;
+    font-size: 1.6em;
+    color: #dbae2e;
+    list-style-type: none;
+    margin: 10px 0;
+    padding: 0;
+}
+
+ul.shows li {
+    padding: 20px 0;
+    border-bottom: 1px solid #333;
+}
+
+.gallery {
+    margin: 20px 0 !important;
+}
+
+.img-gallery {
+    margin-top: 30px;
+}
+
+/*playlists*/
+
+.wp-playlist-dark {
+    border: 0px solid #333 !important;
+    background: rgba(0, 0, 0, 0.7) !important;
+    border-radius: 5px;
+}
+
+.wp-playlist-light {
+/*    background: url('/wp-content/uploads/IMG_20150502_140854.jpg') no-repeat  !important;
+background-size: contain !important;*/
+    color: #000;
+    background: #ddceab !important;
+}
+
+.wp-playlist-item {
+    position: relative;
+    cursor: pointer;
+    padding: 10px 5px !important;
+    border-bottom: #ccc !important;
+}
+
+.wp-playlist-item-length {
+    right: 5px !important;
+    top: 10px !important;
+}
+
+.wp-playlist-playing, .wp-playlist-playing a, .wp-playlist-playing div {
+    color: #5b7293 !important;
+}
+
+.wp-playlist-item-meta {
+    font-size: 12px !important;
+    color: #ccc !important;
+    text-align: right;
+    margin-right: 15px;
+}
+
+.wp-playlist {
+    position: relative;
+}
+
+.wp-playlist-current-item {
+    position: relative;
+    height: 200px !important;
+}
+
+.wp-playlist .wp-playlist-current-item .wp-playlist-caption {
+    position: absolute !important;
+    left: 0 !important;
+    bottom: 0;
+    max-width: 100% !important;
+    width: 100%;
+    height: auto !important;
+    margin-right: 10px;
+    padding: 10px 0;
+    border: 0;
+    z-index: 1;
+    background: rgba(0, 0, 0, .5);
+
+}
+
+.wp-playlist .wp-playlist-current-item img {
+    position: absolute !important;
+    max-width: 100% !important;
+    height: auto !important;
+    padding: 0;
+    border: 0;
+    z-index: 0;
+}
+
+
+/* use a sprite file with darker transport icons */
+.mejs-controls .mejs-button button {
+    background-image: url('/garyflores/wp-includes/js/mediaelement/controls.png') !important;
+}
+
+.feature-box {
+    background-color: rgba(0, 0, 0, 0.85);
+    padding: 20px;
+    border-radius: 10px;
+    margin: 30px 0 30px 10px;
+}
+
+@media only screen
+and (max-width: 480px) {
+
+    .logo {
+        max-width: 190px;
+        margin-top: 10px;
+    }
+
+    .home-main-text {
+        margin-top: 30px !important;
+    }
+
+    .navbar-header {
+        height: 70px !important;
+    }
+}
+
+@media only screen
+and (max-width: 768px) {
+
+    .main-menu {
+        text-align: left;
+        clear: both;
+        float: none;
+        margin: 0 auto;
+        max-width: 640px;
+        width: 100%
+    }
+
+    .nav > li > a {
+        position: relative;
+        display: block;
+        padding: 10px 15px;
+    }
+
+    .main-menu > li {
+        margin: 0;
+        border-bottom: 1px solid #eee;
+
+    }
+
+    .feature-box {
+        background-color: rgba(0, 0, 0, 0.85);
+        padding: 20px;
+        border-radius: 10px;
+        margin: 15px 0;
+    }
+
+    .feature {
+        font-size: 22px;
+        background-color: rgba(0, 0, 0, 0.7);
+        padding: 25px 15px;
+        text-align: center;
+        margin: 50px 0px;
+        border-radius: 10px
+    }
+
+    .gallery-item {
+        float: none !important;
+        text-align: center;
+        width: 100% !important;
+    }
+
+    .main-menu {
+        float: left;
+    }
+
+    .navbar {
+        margin-bottom: 0;
+    }
+
+    .logo {
+        display:none !important;
+    }
+
+    .main-menu > li > a {
+        padding-right: 15px;
+        padding-left: 15px;
+        font-weight: 100;
+        border-bottom: 4px solid transparent;
+        text-decoration: none;
+        font-family: 'Open Sans', sans-serif;
+        text-transform: uppercase;
+        font-size: 18px;
+    }
+
+    a.navbar-brand {
+
+
+        text-align: left;
+    }
+
+    header {
+        padding-bottom: 0;
+    }
+
+
+    .site-title-mobile {
+        display:block;
+        margin: 15px;
+    }
+
+
+    .navbar-header {
+        height: 80px;
+    }
+
+    .navbar-toggle {
+        margin: 25px 0 0 10px;
+        position: relative;
+        float: right;
+        padding: 0;
+        background-color: transparent;
+        background-image: none;
+        border: 1px solid transparent;
+        border-radius: 4px;
+    }
+
+    .navbar-toggle .icon-bar {
+        display: block;
+        width: 22px;
+        height: 3px;
+        border-radius: 1px;
+    }
+
+    .navbar-default .navbar-toggle .icon-bar {
+        background-color: #000;
+    }
+
+    .navbar-default .navbar-toggle {
+        border-color: transparent;
+    }
+
+    .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+        background-color: transparent;
+    }
+
+    .social {
+        float: none;
+        margin: 60px 0 0;
+        clear: both;
+    }
+
+    .social-text {
+        float: none;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        padding: 20px 10px;
+        display: block;
+        height: auto;
+        margin-bottom: 0;
+    }
+
+    .social-icons {
+        float: none;
+        margin: 10px 0 30px 0;
+        height: auto;
+    }
+
+    .text-block {
+        margin: 10px 10px;
+        padding: 10px;
+        background: rgba(0, 0, 0, 0.6);
+        border-radius: 6px;
+        min-height: 400px;
+    }
+
+    .main-menu > li > a {
+        padding-right: 15px;
+        padding-left: 15px;
+        font-size: 16px;
+        font-weight: 600;
+        color: #fff; /* IE8 proofing */
+        color: rgba(255, 255, 255, .95);
+        border-bottom: 0px solid transparent;
+        text-decoration: none;
+    }
+
+    .main-menu {
+        padding-bottom: 0;
+    }
+
+    .larger {
+        font-size: 16px;
+    }
+
+    p {
+        line-height: 1.5;
+    }
+
+    .content-left {
+
+        margin: 10px 0;
+
+    }
+
+}
+
+@media only screen
+and (max-width: 1050px)
+and (min-width: 769px) {
+
+
+}
+
+
+
+
